@@ -50,7 +50,8 @@ async function main() {
   if (!EXEC_PATH) throw new Error('사용할 Chrome 실행 파일을 찾지 못했습니다. PUPPETEER_EXECUTABLE_PATH를 지정하세요.');
 
   const server = await serve();
-  const browser = await puppeteer.launch({ executablePath: EXEC_PATH, headless: true });
+  // GitHub Actions 우분투 러너는 비특권 사용자 네임스페이스가 막혀 있어 샌드박스 없이 띄운다(자기 사이트 로컬 파일만 연다).
+  const browser = await puppeteer.launch({ executablePath: EXEC_PATH, headless: true, args: process.env.CI ? ['--no-sandbox'] : [] });
   try {
     const page = await browser.newPage();
     await page.goto(`http://localhost:${PORT}/cv/`, { waitUntil: 'networkidle0' });
