@@ -1,0 +1,21 @@
+{
+  "name": "j1h0-site",
+  "version": "1.0.0",
+  "description": "Jiho Shin personal CV landing page",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "prebuild": "node scripts/fetch-data.mjs",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "pdf": "node scripts/make-pdf.mjs"
+  },
+  "dependencies": {
+    "astro": "^7.3.5",
+    "js-yaml": "^5.4.2"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^24.10.0"
+  }
+}

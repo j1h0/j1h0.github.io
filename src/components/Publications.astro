@@ -1,0 +1,63 @@
+---
+import Icon from './Icon.astro';
+
+interface Props { t: any; lang: 'ko' | 'en'; stats: any; selectedPubs: any[]; pubYears: any[] }
+const { t, lang, stats, selectedPubs, pubYears } = Astro.props as Props;
+const statTiles = [
+  { n: stats.total, label: t.statLabels.total },
+  { n: stats.journal, label: t.statLabels.journal },
+  { n: stats.conference, label: t.statLabels.conference },
+  { n: stats.misc, label: t.statLabels.misc },
+];
+const allLabel = `${t.pubsAllLabel} (${stats.total}${lang === 'ko' ? '편' : ''})`;
+---
+<section class="band" id="pubs">
+  <div class="container band-grid">
+    <div>
+      <h2 class="section-title" style="margin-bottom:20px;">{t.sec.pubs}</h2>
+      <div class="stats-grid">
+        {statTiles.map((s) => (
+          <div class="stat-tile"><span class="n">{s.n}</span><span class="label">{s.label}</span></div>
+        ))}
+      </div>
+    </div>
+    <div>
+      <div class="pub-list">
+        {selectedPubs.map((p: any) => (
+          <div class="pub-row">
+            <span class="year">{p.year}</span>
+            <div>
+              <p class="title">{p.title}</p>
+              <span class="venue" data-year={p.year}><i>{p.venue}</i></span>
+            </div>
+          </div>
+        ))}
+      </div>
+      <details>
+        <summary class="more-toggle">
+          <Icon name="chevron" />{allLabel}
+        </summary>
+        <div style="margin-top:8px;">
+          {pubYears.map((yg: any) => (
+            <div class="pub-year-group">
+              <div class="yhead">{yg.year}</div>
+              {yg.items.map((p: any) => (
+                <div class="pub-detail">
+                  <div class="badges">
+                    <span class="badge">{p.typeLabel}</span>
+                    {p.award && <span class="badge award"><Icon name="award" />{p.award}</span>}
+                  </div>
+                  {p.url
+                    ? <a class="ptitle" href={p.url} target="_blank" rel="noopener">{p.title}</a>
+                    : <div class="ptitle">{p.title}</div>}
+                  <div class="pauthors">{p.authors}</div>
+                  <div class="pvenue">{p.venue}{p.volume ? `, vol. ${p.volume}` : ''}{p.issue ? `, no. ${p.issue}` : ''}{p.pages ? `, ${p.pages}` : ''}</div>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      </details>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,53 @@
+/* Claude Design 시안(design/tokens/fig-tokens.css)에서 실제로 쓰는 값만 옮겼다.
+   라이트: 기본 :root 블록의 값(디자인 문서가 data-theme="light" div로는 오버라이드하지
+   않으므로 이 기본값이 실제 적용된 색이다. PDF 문서의 하드코딩 색과 대조해 확인함).
+   다크: CV Landing.dc.html 인라인 [data-theme="dark"] 오버라이드 값을 그대로 옮겼다. */
+
+:root {
+  --primary: rgb(103, 80, 164);
+  --on-primary: rgb(255, 255, 255);
+  --primary-container: rgb(234, 221, 255);
+  --on-primary-container: rgb(79, 55, 138);
+  --secondary: rgb(98, 91, 113);
+  --secondary-container: rgb(232, 222, 248);
+  --on-secondary-container: rgb(74, 68, 89);
+  --tertiary: rgb(125, 82, 96);
+  --tertiary-container: rgb(255, 216, 228);
+  --on-tertiary-container: rgb(99, 59, 72);
+  --surface: rgb(254, 247, 255);
+  --on-surface: rgb(29, 27, 32);
+  --on-surface-variant: rgb(73, 69, 79);
+  --outline: rgb(121, 116, 126);
+  --outline-variant: rgb(202, 196, 208);
+  --surface-container-lowest: rgb(255, 255, 255);
+  --surface-container-low: rgb(247, 242, 250);
+  --surface-container: rgb(243, 237, 247);
+  --surface-container-high: rgb(236, 230, 240);
+  --surface-container-highest: rgb(230, 224, 233);
+
+  --corner-full: 9999px;
+  --font-plain: "Roboto", "Noto Sans KR", system-ui, sans-serif;
+}
+
+[data-theme="dark"] {
+  --primary: rgb(208, 188, 255);
+  --on-primary: rgb(56, 30, 114);
+  --primary-container: rgb(79, 55, 139);
+  --on-primary-container: rgb(234, 221, 255);
+  --secondary: rgb(204, 194, 220);
+  --secondary-container: rgb(74, 68, 88);
+  --on-secondary-container: rgb(232, 222, 248);
+  --tertiary: rgb(239, 184, 200);
+  --tertiary-container: rgb(99, 59, 72);
+  --on-tertiary-container: rgb(255, 216, 228);
+  --surface: rgb(20, 18, 24);
+  --on-surface: rgb(230, 224, 233);
+  --on-surface-variant: rgb(202, 196, 208);
+  --outline: rgb(147, 143, 153);
+  --outline-variant: rgb(73, 69, 79);
+  --surface-container-lowest: rgb(15, 13, 19);
+  --surface-container-low: rgb(29, 27, 32);
+  --surface-container: rgb(33, 31, 38);
+  --surface-container-high: rgb(43, 41, 48);
+  --surface-container-highest: rgb(54, 52, 59);
+}

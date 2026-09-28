@@ -1,0 +1,51 @@
+---
+import Icon from './Icon.astro';
+
+interface Props { t: any; lang: 'ko' | 'en'; ongoingProjects: any[]; closedProjects: any[]; intlMeta: string }
+const { t, lang, ongoingProjects, closedProjects, intlMeta } = Astro.props as Props;
+const closedLabel = `${t.closedMoreLabel} (${closedProjects.length}${lang === 'ko' ? '건' : ''})`;
+const intlLabel = `${t.intlMoreLabel}`;
+---
+<section class="band alt" id="projects">
+  <div class="container projects-grid">
+    <div>
+      <h2 class="section-title" style="margin-bottom:8px;">{t.sec.projects}</h2>
+      {ongoingProjects.map((p: any) => (
+        <div class="proj-ongoing">
+          <span class="tag-ongoing">{t.ongoingLabel}</span>
+          <div class="body">{p.title}<div class="meta">{p.period} · {p.agency} · {p.role}</div></div>
+        </div>
+      ))}
+      <details>
+        <summary class="more-toggle"><Icon name="chevron" />{closedLabel}</summary>
+        <div style="display:flex;flex-direction:column;gap:8px;padding:8px 4px 0;">
+          {closedProjects.map((p: any) => (
+            <div class="proj-past-row"><div class="title">{p.title}</div><div class="meta">{p.period} · {p.agency} · {p.role}</div></div>
+          ))}
+          <p class="proj-rnd-note">{t.projRnd}</p>
+        </div>
+      </details>
+    </div>
+    <div>
+      <div class="intl-head">
+        <h2 class="section-title">{t.sec.intl}</h2>
+        <span class="intl-meta">{intlMeta}</span>
+      </div>
+      <div class="chip-row">
+        {t.intlCountries.map((c: string) => <span class="chip chip-tertiary">{c}</span>)}
+      </div>
+      <p class="intl-roles">{t.intlRoles}</p>
+      <details>
+        <summary class="more-toggle"><Icon name="chevron" />{intlLabel}</summary>
+        <div>
+          {t.intl.map((il: any) => (
+            <div class="intl-row">
+              <span class="year">{il.year}</span>
+              <div><div class="title">{il.title}</div><div class="role">{il.role}</div></div>
+            </div>
+          ))}
+        </div>
+      </details>
+    </div>
+  </div>
+</section>

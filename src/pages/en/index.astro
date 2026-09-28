@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Hero from '../../components/Hero.astro';
+import Research from '../../components/Research.astro';
+import CareerTimeline from '../../components/CareerTimeline.astro';
+import Publications from '../../components/Publications.astro';
+import Projects from '../../components/Projects.astro';
+import ActivitiesCerts from '../../components/ActivitiesCerts.astro';
+import ContactFooter from '../../components/ContactFooter.astro';
+import { prepare } from '../../lib/prepare.js';
+
+const { t, updated, stats, selectedPubs, pubYears, ongoingProjects, closedProjects, intlMeta } = prepare('en');
+---
+<BaseLayout lang="en" path="/en/" title="Jiho Shin, Ph.D." description={t.intro}>
+  <Header t={t} lang="en" otherLangPath="/" />
+  <main id="main">
+    <Hero t={t} />
+    <Research t={t} />
+    <CareerTimeline t={t} />
+    <Publications t={t} lang="en" stats={stats} selectedPubs={selectedPubs} pubYears={pubYears} />
+    <Projects t={t} lang="en" ongoingProjects={ongoingProjects} closedProjects={closedProjects} intlMeta={intlMeta} />
+    <ActivitiesCerts t={t} />
+    <ContactFooter t={t} updated={updated} lang="en" />
+  </main>
+</BaseLayout>

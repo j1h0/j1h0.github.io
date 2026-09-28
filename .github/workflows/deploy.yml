@@ -1,0 +1,66 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+  schedule:
+    # 매일 09:00 KST(00:00 UTC), 연구실 홈페이지 논문·과제 갱신을 반영하기 위한 재빌드.
+    - cron: '0 0 * * *'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install fonts and PDF tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-noto-cjk poppler-utils
+
+      - name: Install Chrome for Puppeteer
+        run: npx @puppeteer/browsers install chrome@stable --path "$HOME/.cache/puppeteer/chrome-root"
+
+      - name: Build
+        run: npm run build
+
+      - name: Generate CV PDF
+        run: |
+          CHROME_BIN=$(find "$HOME/.cache/puppeteer/chrome-root" -maxdepth 2 -type d -name "linux-*" | sort | tail -1)/chrome-linux64/chrome
+          PUPPETEER_EXECUTABLE_PATH="$CHROME_BIN" node scripts/make-pdf.mjs
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,53 @@
+---
+interface Props { t: any }
+const { t } = Astro.props as Props;
+const SECTOR_VAR: Record<string, string> = { edu: 'var(--primary)', inst: 'var(--tertiary)', police: 'var(--secondary)', ind: 'var(--outline)' };
+const sectorKeys = ['edu', 'inst', 'police', 'ind'];
+---
+<section class="band alt" id="career">
+  <div class="container band-grid cols-3">
+    <div>
+      <h2 class="section-title" style="margin-bottom:20px;">{t.sec.career}</h2>
+      <div class="sector-legend">
+        {sectorKeys.map((k) => (
+          <span><span class="dot" style={`background:${SECTOR_VAR[k]}`}></span>{t.sectors[k]}</span>
+        ))}
+      </div>
+    </div>
+    <div>
+      <div>
+        {t.career.map((c: any) => (
+          <div class="timeline-row">
+            <div class="timeline-period">{c.period}</div>
+            <div class="timeline-track">
+              <span class="timeline-dot" style={`background:${SECTOR_VAR[c.sector]}`}></span>
+              <span class="timeline-line"></span>
+            </div>
+            <div class="timeline-body">
+              <div class="org">{c.org}</div>
+              <div class="role">{c.role}</div>
+              {c.subs && (
+                <div class="timeline-subs">
+                  {c.subs.map((s: any) => (
+                    <div class="sub-row"><span class="p">{s.period}</span><span><b>{s.org}</b> <span class="p">{s.role}</span></span></div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+      <p class="career-sub">{t.careerSub}</p>
+    </div>
+    <div class="edu-col">
+      <h3 class="section-title" style="font-size:22px;line-height:28px;">{t.sec.edu}</h3>
+      {t.edu.map((e: any) => (
+        <div class="edu-card">
+          <span class="date">{e.date}</span>
+          <span class="deg">{e.deg}</span>
+          <span class="school">{e.school}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

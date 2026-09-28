@@ -1,0 +1,24 @@
+---
+import Icon from './Icon.astro';
+
+interface Props {
+  t: any;
+  lang: 'ko' | 'en';
+  otherLangPath: string;
+}
+const { t, lang, otherLangPath } = Astro.props as Props;
+---
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="#main">{t.name}</a>
+    <nav class="site-nav">
+      {t.nav.map((n: any) => <a href={n.href}>{n.label}</a>)}
+    </nav>
+    <span class="header-divider"></span>
+    <a class="icon-btn" href={otherLangPath}>{t.langBtn}</a>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label={lang === 'ko' ? '테마 전환' : 'Toggle theme'}>
+      <Icon name="moon" />
+      <Icon name="sun" />
+    </button>
+  </div>
+</header>

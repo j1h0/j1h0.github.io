@@ -1,0 +1,127 @@
+---
+// 이력서 PDF 인쇄 라우트. doc-page 런타임(Claude Design)은 쓰지 않고
+// print CSS로 재구성했다. 1단계는 국문 한 종만 만든다(storyboard.md 3절).
+// 이 페이지 자체는 화면에서도 열리지만, 실제 배포 링크는 GH Actions가
+// puppeteer로 이 경로를 인쇄해 만든 JihoShin_CV_2026.pdf다.
+import { prepare } from '../../lib/prepare.js';
+import { getProjects } from '../../lib/data.js';
+
+const { t, updated, pubYears } = prepare('ko');
+const projects = getProjects();
+const TYPE_LABEL: Record<string, string> = { journal: '학술지', conference: '학술대회', misc: '기타' };
+const pubsFlat = pubYears.flatMap((g: any) => g.items);
+const byType = (k: string) => pubsFlat.filter((p: any) => p.type === k);
+const groups = ['journal', 'conference', 'misc'].map((k) => ({ key: k, label: TYPE_LABEL[k], items: byType(k) }));
+const statLine = `전체 ${pubsFlat.length}편 · ` + groups.map((g) => `${g.label} ${g.items.length}`).join(' · ');
+---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <title>JihoShin_CV_2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Roboto, 'Noto Sans KR', sans-serif; color: rgb(29,27,32); background: #ddd; }
+    a { color: rgb(103,80,164); text-decoration: none; }
+    .page { width: 210mm; min-height: 297mm; margin: 12px auto; background: #fff; padding: 16mm; }
+    @media print {
+      body { background: #fff; }
+      .page { width: auto; min-height: 0; margin: 0; padding: 0; }
+      @page { size: A4; margin: 16mm; }
+    }
+    h2.h { font-size: 12pt; font-weight: 500; color: rgb(103,80,164); margin: 6mm 0 2mm; }
+    table.rows { width: 100%; border-collapse: collapse; font-size: 9.5pt; line-height: 1.5; }
+    table.rows td { padding: 1mm 0; vertical-align: top; }
+    table.rows td.when { width: 24mm; color: rgb(73,69,79); }
+    .muted { color: rgb(73,69,79); }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2mm 6mm; font-size: 9.5pt; line-height: 1.5; }
+    ul.plain { margin: 0; padding-left: 5mm; font-size: 9.5pt; line-height: 1.5; }
+    ol.pub { margin: 0; padding-left: 6mm; font-size: 9pt; line-height: 1.5; display: flex; flex-direction: column; gap: 1.2mm; }
+    ol.pub li { break-inside: avoid; }
+    .grid-cols2 { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; break-inside: avoid; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div style="display:grid;grid-template-columns:1fr 26mm;gap:8mm;align-items:start;padding-bottom:6mm;border-bottom:2px solid rgb(103,80,164);">
+      <div style="display:flex;flex-direction:column;gap:2mm;">
+        <div style="font-size:24pt;line-height:1.2;font-weight:500;">{t.name} <span style="font-size:13pt;font-weight:400;color:rgb(73,69,79);">{t.nameAlt}</span></div>
+        <div style="font-size:11pt;font-weight:500;color:rgb(103,80,164);">{t.role}, {t.affil}</div>
+        <div style="font-size:10.5pt;line-height:1.6;">{t.intro}</div>
+        <div style="font-size:9pt;color:rgb(73,69,79);display:flex;flex-wrap:wrap;gap:4mm;">
+          <span>suchme@gmail.com</span><span>연구실 D322호</span><span>042-829-7643</span><a href="https://dfslab.github.io">dfslab.github.io</a>
+        </div>
+      </div>
+      <img src="/images/profile.jpg" alt="" style="width:26mm;height:32mm;object-fit:cover;object-position:50% 15%;border-radius:2mm;" />
+    </div>
+
+    <h2 class="h">연구 분야</h2>
+    <div class="two-col">
+      {t.research.map((r: any) => (
+        <div><b style="font-weight:500;">{r.title}</b><br />{r.desc}</div>
+      ))}
+    </div>
+
+    <h2 class="h">학력</h2>
+    <table class="rows">
+      {t.edu.map((e: any) => (
+        <tr><td class="when">{e.date}</td><td>{e.deg}, {e.school}</td></tr>
+      ))}
+    </table>
+
+    <h2 class="h">경력</h2>
+    <table class="rows">
+      {t.career.map((c: any) => (
+        <tr><td class="when">{c.period}</td><td>
+          {c.org}, {c.role}
+          {c.subs && (
+            <div style="font-size:8.5pt;line-height:1.5;color:rgb(73,69,79);margin-top:0.5mm;">
+              {c.subs.map((s: any, i: number) => <>{i > 0 ? ' · ' : ''}{s.org} {s.role} ({s.period})</>)}
+            </div>
+          )}
+        </td></tr>
+      ))}
+    </table>
+    <p class="muted" style="font-size:9pt;line-height:1.5;margin:2mm 0 0;">{t.careerSub}</p>
+
+    <h2 class="h">연구과제</h2>
+    <table class="rows">
+      {projects.map((p: any) => (
+        <tr><td class="when">{p.period}{p.status === 'ongoing' ? ' 진행' : ''}</td><td>{p.title} <span class="muted">({p.agency}, {p.role})</span></td></tr>
+      ))}
+    </table>
+    <p class="muted" style="font-size:9pt;line-height:1.5;margin:2mm 0 0;">{t.projRnd}</p>
+
+    <h2 class="h">국제개발협력 <span style="font-size:9.5pt;font-weight:400;" class="muted">{t.intl.length}건 · {t.intlPeriod} · {t.intlFunders}</span></h2>
+    <table class="rows">
+      {t.intl.map((il: any) => (
+        <tr><td class="when">{il.year}</td><td>{il.title} <span class="muted">({il.role})</span></td></tr>
+      ))}
+    </table>
+
+    <div class="grid-cols2">
+      <div>
+        <h2 class="h">대외활동</h2>
+        <ul class="plain">{t.activities.map((a: string) => <li>{a}</li>)}</ul>
+      </div>
+      <div>
+        <h2 class="h">자격</h2>
+        <ul class="plain">{t.certs.map((c: string) => <li>{c}</li>)}</ul>
+      </div>
+    </div>
+
+    <h2 class="h">논문 <span style="font-size:9.5pt;font-weight:400;" class="muted">{statLine}</span></h2>
+    {groups.map((g) => (
+      <div style="margin-top:3mm;">
+        <div style="font-size:10pt;font-weight:500;margin-bottom:1.5mm;">{g.label} <span class="muted" style="font-weight:400;">{g.items.length}편</span></div>
+        <ol class="pub">
+          {g.items.map((p: any) => (
+            <li>{p.authors}, &ldquo;{p.title},&rdquo; <i>{p.venue}{p.volume ? `, vol. ${p.volume}` : ''}{p.issue ? `, no. ${p.issue}` : ''}{p.pages ? `, ${p.pages}` : ''}</i>, {p.year}.{p.award ? ` (${p.award})` : ''}</li>
+          ))}
+        </ol>
+      </div>
+    ))}
+  </div>
+</body>
+</html>

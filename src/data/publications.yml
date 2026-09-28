@@ -1,0 +1,533 @@
+# DFS Lab 논문 목록
+# 출처: https://sites.google.com/view/dfslab/publication (2026-09-26 curl 수집)
+# 원문 그대로 이관, 요약/축약 없음. type: journal|conference|misc
+- id: pub-001
+  type: journal
+  authors: "Jiho Shin, Byoung Hun Moon"
+  title: "Forensic Recoverability of Deleted Records Under Database Shrink in Microsoft SQL Server 2025: A Version-Comparative Experimental Study"
+  venue: "Applied Sciences"
+  year: 2026
+  url: "https://www.mdpi.com/2076-3417/16/13/6416"
+  volume: "16"
+  issue: "13"
+  pages: "6416"
+- id: pub-002
+  type: journal
+  authors: "Jiho Shin, Inkyoung Shin"
+  title: "A Vulnerability Taxonomy for Tor-Based Hidden Services: Toward a De-Anonymization Framework for Cybercrime Investigation"
+  venue: "Electronics"
+  year: 2026
+  url: "https://www.mdpi.com/2079-9292/15/11/2370"
+  volume: "15"
+  issue: "11"
+  pages: "2370"
+- id: pub-003
+  type: journal
+  authors: "Jiho Shin, Byoung Hun Moon"
+  title: "Cloud Database Forensics in Practice: Structural Challenges and Investigative Lessons from Azure SQL Database"
+  venue: "IEEE Access"
+  year: 2025
+  url: "https://doi.org/10.1109/access.2025.3639429"
+  volume: "13"
+  pages: "204168-204178"
+- id: pub-004
+  type: journal
+  authors: "Jiho Shin"
+  title: "Memory-Driven Forensic Analysis of SQL Server: A Buffer Pool and Page Inspection Approach"
+  venue: "Sensors"
+  year: 2025
+  url: "https://doi.org/10.3390/s25113512"
+  volume: "25"
+  issue: "11"
+  pages: "3512"
+- id: pub-005
+  type: journal
+  authors: "신지호, 신인경"
+  title: "영상 합성 기술의 문제점 및 치안과학기술 분야 대응방안"
+  venue: "치안정책연구"
+  year: 2024
+  url: "https://doi.org/10.35147/knpsi.2024.38.4.417"
+  volume: "38"
+  issue: "4"
+  pages: "417-448"
+  authors_en: "Jiho Shin, In-Kyoung Shin"
+  title_en: "Challenges and Countermeasures in Video Synthesis Technology for Policing"
+  venue_en: "The Journal of Police Policies"
+- id: pub-006
+  type: journal
+  authors: "Mingyu Lee, Jiho Shin, Jung Taek Seo"
+  title: "Programmable Logic Controller Block Monitoring System for Memory Attack Defense in Industrial Control Systems"
+  venue: "Computers, Materials & Continua"
+  year: 2023
+  url: "https://doi.org/10.32604/cmc.2023.041774"
+  volume: "77"
+  issue: "2"
+  pages: "2427-2442"
+- id: pub-007
+  type: journal
+  authors: "Ju Hyeon Lee, Jiho Shin, Jung Taek Seo"
+  title: "Solar Power Plant Network Packet-Based Anomaly Detection System for Cybersecurity"
+  venue: "Computers, Materials & Continua"
+  year: 2023
+  url: "https://doi.org/10.32604/cmc.2023.039461"
+  volume: "77"
+  issue: "1"
+  pages: "757-779"
+- id: pub-008
+  type: journal
+  authors: "Donghyun Kim, Seungho Jeon, Jiho Shin, Jung Taek Seo"
+  title: "Design the IoT Botnet Defense Process for Cybersecurity in Smart City"
+  venue: "Intelligent Automation & Soft Computing"
+  year: 2023
+  url: "https://doi.org/10.32604/iasc.2023.040019"
+  volume: "37"
+  issue: "3"
+  pages: "2979-2997"
+- id: pub-009
+  type: journal
+  authors: "Daun Jung, Jiho Shin, Chaechang Lee, Kookheui Kwon, Jung Taek Seo"
+  title: "Cyber Security Controls in Nuclear Power Plant by Technical Assessment Methodology"
+  venue: "IEEE Access"
+  year: 2023
+  url: "https://doi.org/10.1109/access.2023.3244991"
+  volume: "11"
+  pages: "15229-15241"
+- id: pub-010
+  type: journal
+  authors: "Donghyun Kim, Jiho Shin, Jung Taek Seo"
+  title: "A Study on Log Collection to Analyze Causes of Malware Infection in IoT Devices in Smart City Environments"
+  venue: "Journal of Internet Computing and Services"
+  year: 2023
+  url: "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002937264"
+  volume: "24"
+  issue: "1"
+  pages: "17-26"
+- id: pub-011
+  type: journal
+  authors: "Jiho Shin, Jung Taek Seo"
+  title: "Verification of Privacy Protection Reliability Through Mobile Forensic Approach Regarding iOS-based Instant Messenger"
+  venue: "Sustainability"
+  year: 2022
+  url: "https://doi.org/10.3390/su142013281"
+  volume: "14"
+  issue: "20"
+  pages: "13281"
+- id: pub-012
+  type: journal
+  authors: "Junwon Kim, Jiho Shin, Jung Taek Seo"
+  title: "Detection and Blocking Method against DLL Injection Attack Using PEB-LDR of ICS EWS in Smart IoT Environments"
+  venue: "Journal of Internet Technology"
+  year: 2022
+  url: "https://doi.org/10.53106/160792642022072304022"
+  volume: "23"
+  issue: "4"
+  pages: "875-888"
+- id: pub-013
+  type: journal
+  authors: "Hyunpyo Choi, Jiho Shin, Jung Taek Seo"
+  title: "Artifacts Analysis and Utilization of Decentralized Web Service ZeroNet for Digital Forensics"
+  venue: "Security and Communication Networks"
+  year: 2022
+  url: "https://doi.org/10.1155/2022/9418051"
+  volume: "2022"
+  pages: "1-10"
+- id: pub-014
+  type: journal
+  authors: "Abdul Wahid Khan, Shah Zaib, Faheem Khan, Ilhan Tarimer, Jung Taek Seo, Jiho Shin"
+  title: "Analyzing and Evaluating Critical Cyber Security Challenges Faced by Vendor Organizations in Software Development: SLR Based Approach"
+  venue: "IEEE Access"
+  year: 2022
+  url: "https://doi.org/10.1109/access.2022.3179822"
+  volume: "10"
+  pages: "65044-65054"
+- id: pub-015
+  type: journal
+  authors: "Junwon Kim, Jiho Shin, Ki-Woong Park, Jung Taek Seo"
+  title: "Improving Method of Anomaly Detection Performance for Industrial IoT Environment"
+  venue: "Computers, Materials & Continua"
+  year: 2022
+  url: "https://doi.org/10.32604/cmc.2022.026619"
+  volume: "72"
+  issue: "3"
+  pages: "5377-5394"
+- id: pub-016
+  type: journal
+  authors: "Jiho Shin, Hyunpyo Choi, Jung Taek Seo"
+  title: "A Study on Command Block Collection and Restoration Techniques through Detection of Project File Manipulation on Engineering Workstation of Industrial Control System"
+  venue: "Forensic Science International: Digital Investigation"
+  year: 2022
+  url: "https://doi.org/10.1016/j.fsidi.2022.301354"
+  volume: "40"
+  pages: "301354"
+- id: pub-017
+  type: journal
+  authors: "신지호, 최현표, 박광선"
+  title: "몰래카메라를 악용한 2차 범죄 대응을 위한 디지털포렌식 조사 방법론"
+  venue: "디지털포렌식연구"
+  year: 2022
+  url: "https://doi.org/10.22798/KDFS.2022.16.3.102"
+  volume: "16"
+  issue: "3"
+  pages: "102"
+  authors_en: "Jiho Shin, Hyunpyo Choi, Kwang Sun Park"
+  title_en: "A Digital Investigation Method for Secondary Crime Exploiting Audio Record of Spy Camera Video in Digital Sex Crime"
+  venue_en: "Journal of Digital Forensics"
+- id: pub-018
+  type: journal
+  authors: "박광선, 최동희, 신지호"
+  title: "PC 웹 브라우저 기반 탈중앙화 가상자산 지갑 카이카스의 니모닉 노출 위험"
+  venue: "치안정책연구"
+  year: 2022
+  url: "https://doi.org/10.35147/knpsi.2022.36.3.349"
+  volume: "36"
+  issue: "3"
+  pages: "349-380"
+  authors_en: "Kwang Sun Park, Dong-hui Choi, Jiho Shin"
+  title_en: "A study on mnemonic words exposure risk of a web browser-based decentralized cryptocurrency wallet Kaikas"
+  venue_en: "The Journal of Police Policies"
+- id: pub-019
+  type: journal
+  authors: "Jiho Shin, Ilsun You, Jung Taek Seo"
+  title: "Investment Priority Analysis of ICS Information Security Resources in Smart Mobile IoT Network Environment Using the Analytic Hierarchy Process"
+  venue: "Mobile Information Systems"
+  year: 2020
+  url: "https://doi.org/10.1155/2020/8878088"
+  volume: "2020"
+  pages: "1-11"
+- id: pub-020
+  type: journal
+  authors: "Joo Chan Lee, Hyun Pyo Choi, Jang Hoon Kim, Jun Won Kim, Daun Jung, Jiho Shin, Jung Taek Seo"
+  title: "Identifying and Verifying Vulnerabilities through PLC Network Protocol and Memory Structure Analysis"
+  venue: "Computers, Materials & Continua"
+  year: 2020
+  url: "https://doi.org/10.32604/cmc.2020.011251"
+  volume: "65"
+  issue: "1"
+  pages: "53-67"
+- id: pub-021
+  type: journal
+  authors: "박요한, 신지호"
+  title: "아시아 개발도상국 대상 사이버범죄대응 교육 모형 개발과 적용"
+  venue: "치안정책연구"
+  year: 2020
+  url: "https://doi.org/10.35147/knpsi.2020.34.4.313"
+  volume: "34"
+  issue: "4"
+  pages: "313-339"
+  authors_en: "Yo-Han Park, Jiho Shin"
+  title_en: "Development and Application of a Cybercrime Response Training Model for Developing Countries in Asia"
+  venue_en: "The Journal of Police Policies"
+- id: pub-022
+  type: journal
+  authors: "김장훈, 이주찬, 신지호, 서정택"
+  title: "전기안전관리 플랫폼 보안 위협분석 및 대응방안 연구"
+  venue: "전기학회논문지"
+  year: 2020
+  url: "https://doi.org/10.5370/KIEE.2020.69.7.1135"
+  volume: "69"
+  issue: "7"
+  pages: "1136-1143"
+  authors_en: "Jang Hoon Kim, Joo Chan Lee, Jiho Shin, Jung Taek Seo"
+  title_en: "A Study on the Security Threat Analysis and Countermeasures of Electric Safety Management Platform"
+  venue_en: "The Transactions of The Korean Institute of Electrical Engineers"
+- id: pub-023
+  type: journal
+  authors: "신지호, 서정택"
+  title: "SCADA 디지털포렌식 동향과 향후 연구 제안"
+  venue: "정보보호학회논문지"
+  year: 2019
+  url: "https://doi.org/10.13089/JKIISC.2019.29.6.1351"
+  volume: "29"
+  issue: "6"
+  pages: "1351-1364"
+  authors_en: "Jiho Shin, Jung Taek Seo"
+  title_en: "Research Trends of SCADA Digital Forensics and Future Research Proposal"
+  venue_en: "Journal of The Korea Institute of Information Security and Cryptology"
+- id: pub-024
+  type: journal
+  authors: "Jang Mook Kang, Choel Hee Yoon, Jiho Shin"
+  title: "A Study on Development of IoT Software Vulnerability (Using Fake Information) Response System Based on Artificial Intelligence"
+  venue: "International Journal of Engineering & Technology"
+  year: 2018
+  url: "https://doi.org/10.14419/ijet.v7i3.33.18598"
+  volume: "7"
+  issue: "3.33"
+  pages: "157"
+- id: pub-025
+  type: journal
+  authors: "신지호"
+  title: "Microsoft SQL Server의 원본 수집 방식에 따른 삭제 데이터의 복구 가능성 비교"
+  venue: "정보보호학회논문지"
+  year: 2018
+  url: "https://doi.org/10.13089/JKIISC.2018.28.4.859"
+  volume: "28"
+  issue: "4"
+  pages: "859-868"
+  authors_en: "Jiho Shin"
+  title_en: "Comparing Recoverability of Deleted Data According to Original Source Collection Methods on Microsoft SQL Server"
+  venue_en: "Journal of The Korea Institute of Information Security and Cryptology"
+- id: pub-026
+  type: journal
+  authors: "신지호"
+  title: "Microsoft SQL Server 삭제 이벤트의 데이터 잔존 비교"
+  venue: "정보보호학회논문지"
+  year: 2017
+  url: "https://doi.org/10.13089/JKIISC.2017.27.2.223"
+  volume: "27"
+  issue: "2"
+  pages: "223-232"
+  authors_en: "Jiho Shin"
+  title_en: "Comparison of Remaining Data According to Deletion Events on Microsoft SQL Server"
+  venue_en: "Journal of The Korea Institute of Information Security and Cryptology"
+- id: pub-027
+  type: journal
+  authors: "신지호, 최낙범"
+  title: "경찰 디지털 포렌식 조직구조와 업무과정 개선방안에 관한 연구: 거점분석실과 전문상담관 제도를 중심으로"
+  venue: "경찰학연구"
+  year: 2016
+  url: "https://doi.org/10.22816/polsci.2016.16.3.009"
+  volume: "16"
+  issue: "3"
+  pages: "231-262"
+  authors_en: "Jiho Shin, Nakbum Choi"
+  title_en: "A Study on Improving of Digital Forensic Organization and Work Procedures in Police"
+  venue_en: "The Journal of Police Science"
+- id: pub-028
+  type: journal
+  authors: "신지호"
+  title: "스미싱 범죄의 피해 확산방지를 위한 초동조치에 관한 연구"
+  venue: "디지털포렌식연구"
+  year: 2015
+  url: "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002160177"
+  volume: "9"
+  issue: "1"
+  pages: "33-46"
+  authors_en: "Jiho Shin"
+  title_en: "A Study on the Initial Action for the non-Proliferation of Damage Caused by Smishing"
+  venue_en: "Journal of Digital Forensics"
+- id: pub-029
+  type: conference
+  authors: "박현빈, 신지호"
+  title: "크롬 원격 데스크톱(CRD) 대상 메모리 포렌식 연구: 피제어 PC에 대한 휘발성 아티팩트 분석"
+  venue: "한국디지털콘텐츠학회 하계학술대회"
+  year: 2026
+  award: "은상"
+  award_en: "Silver Prize"
+  url: "https://dcs.or.kr/conference/summer2026/notice/article/1086"
+  authors_en: "Hyeonbin Park, Jiho Shin"
+  title_en: "A Study on Memory Forensics of Chrome Remote Desktop (CRD): Volatile Artifact Analysis of the Controlled PC"
+  venue_en: "Korea Digital Contents Society Summer Conference 2026"
+- id: pub-030
+  type: conference
+  authors: "신예준, 신지호"
+  title: "생성형 AI 데스크톱 애플리케이션의 로컬 데이터 저장 구조 분석 및 대화 내역 복원 기법 연구"
+  venue: "한국디지털포렌식학회 하계학술대회"
+  year: 2026
+  authors_en: "Yejun Shin, Jiho Shin"
+  title_en: "A Study on Local Data Storage Structure Analysis and Conversation History Reconstruction in Generative AI Applications"
+  venue_en: "Korea Digital Forensics Society Summer Conference 2026"
+- id: pub-031
+  type: conference
+  authors: "박현빈, 신지호"
+  title: "안티포렌식 관점에서의 WebRTC 기반 크롬 원격 데스크톱(CRD) 환경 분석: 제어 PC를 통한 피제어 PC 흔적 역추적 연구"
+  venue: "한국디지털포렌식학회 하계학술대회"
+  year: 2026
+  award: "한국디지털포렌식학회장상"
+  award_en: "President's Award, Korean Digital Forensics Society"
+  authors_en: "Hyeonbin Park, Jiho Shin"
+  title_en: "A Forensic Approach to Tracing Target PC Artifacts via the Host PC in Chrome Remote Desktop under Anti-Forensics Scenarios"
+  venue_en: "Korea Digital Forensics Society Summer Conference 2026"
+- id: pub-032
+  type: conference
+  authors: "Donghyun Kim, Seungho Jeon, Jiho Shin, Jung Taek Seo"
+  title: "OCR meets the Dark Web: Identifying the Content Type Regarding Illegal and Cybercrime"
+  venue: "World Conference on Information Security Applications (WISA)"
+  year: 2024
+  url: "https://doi.org/10.1007/978-981-99-8024-6_16"
+- id: pub-033
+  type: conference
+  authors: "Donghyun Kim, Jiho Shin, Jung Taek Seo"
+  title: "Deriving IoT Botnet Defense Technique Using MITRE ATT&CK-D3FEND"
+  venue: "International Conference on Mobile Internet Security (Mobisec)"
+  year: 2022
+- id: pub-034
+  type: conference
+  authors: "Hohun Jin, Jiho Shin, Jung Taek Seo"
+  title: "A Study on Botnet Attack Formulation Technique for 5G Massive IoT Targets"
+  venue: "International Conference on Mobile Internet Security (Mobisec)"
+  year: 2022
+- id: pub-035
+  type: conference
+  authors: "Changhyung Roh, Ilhwan Ji, Jiho Shin, Jung Taek Seo"
+  title: "A Study on PLC Data Integrity Verification Using Private Blockchain"
+  venue: "International Conference on Mobile Internet Security (Mobisec)"
+  year: 2022
+- id: pub-036
+  type: conference
+  authors: "최재혁, 신지호, 윤철희, 서정택"
+  title: "자율주행자동차 OTA 환경에서의 보안 위협 분석 및 대응방안"
+  venue: "한국융합보안학회 하계학술대회"
+  year: 2022
+  award: "우수논문상"
+  award_en: "Excellent Paper Award"
+  authors_en: "Jaehyeok Choi, Jiho Shin, Choel Hee Yoon, Jung Taek Seo"
+  title_en: "Security Threat Analysis and Countermeasures for Over-the-Air (OTA) Update Environments of Autonomous Vehicles"
+  venue_en: "Korea Convergence Security Association Summer Conference 2022"
+- id: pub-037
+  type: conference
+  authors: "Junwon Kim, Jiho Shin, Jung Taek Seo"
+  title: "Anomaly Detection Method using Machine Learning Based on Feature-Specific Correlation in Industrial Control System"
+  venue: "International Conference on Internet (ICONI)"
+  year: 2021
+- id: pub-038
+  type: conference
+  authors: "Daun Jung, Jiho Shin, Jung Taek Seo"
+  title: "Analysis of Research Trends on the Legal Characteristics of Virtual Assets"
+  venue: "International Conference on Internet (ICONI)"
+  year: 2021
+- id: pub-039
+  type: conference
+  authors: "Insung Song, Daun Jung, Jiho Shin, Jung Taek Seo"
+  title: "A Study on Training Cyber Attack Scenario at Industrial Control System"
+  venue: "International Conference on Internet (ICONI)"
+  year: 2021
+- id: pub-040
+  type: conference
+  authors: "H. Choi, Jiho Shin, Jung Taek Seo"
+  title: "Proposal of ZeroNet's Peer Target-Specific File Ownership Verification Method for Digital Forensics Investigation"
+  venue: "International Conference on Internet (ICONI)"
+  year: 2021
+- id: pub-041
+  type: conference
+  authors: "Junwon Kim, Hyunpyo Choi, Jiho Shin, Jung Taek Seo"
+  title: "Anomaly Detection Methods using Power Plant Packet Data with Machine Learning in IoT Environment"
+  venue: "International Conference on Mobile Internet Security (Mobisec)"
+  year: 2021
+  award: "KISA Award"
+- id: pub-042
+  type: conference
+  authors: "김준원, 신지호, 서정택"
+  title: "클러스터링 기반 제어시스템 이상징후 탐지 성능 향상 방안 연구"
+  venue: "한국정보보호학회 동계학술대회"
+  year: 2021
+  authors_en: "Junwon Kim, Jiho Shin, Jung Taek Seo"
+  title_en: "A Study on Improving Clustering-Based Anomaly Detection Performance for Industrial Control Systems"
+  venue_en: "Conference on Information Security and Cryptography-Winter 2021 (CISC-W'21)"
+- id: pub-043
+  type: conference
+  authors: "최현표, 신지호, 서정택"
+  title: "제어시스템 EWS 소프트웨어의 프로젝트 패스워드 우회 취약점 분석"
+  venue: "한국정보보호학회 동계학술대회"
+  year: 2021
+  authors_en: "Hyunpyo Choi, Jiho Shin, Jung Taek Seo"
+  title_en: "Analysis of a Project Password Bypass Vulnerability in Engineering Workstation (EWS) Software of Industrial Control Systems"
+  venue_en: "Conference on Information Security and Cryptography-Winter 2021 (CISC-W'21)"
+- id: pub-044
+  type: conference
+  authors: "정다운, 신지호, 서정택"
+  title: "기반시설 무선통신 보안 요구사항 및 보안조치 도출"
+  venue: "한국정보보호학회 동계학술대회"
+  year: 2021
+  authors_en: "Daun Jung, Jiho Shin, Jung Taek Seo"
+  title_en: "Deriving Security Requirements and Security Controls for Wireless Communications in Critical Infrastructure"
+  venue_en: "Conference on Information Security and Cryptography-Winter 2021 (CISC-W'21)"
+- id: pub-045
+  type: conference
+  authors: "김동현, 신지호, 서정택"
+  title: "IoT 보안 위협 식별 및 보안기술 분석"
+  venue: "한국정보보호학회 동계학술대회"
+  year: 2021
+  authors_en: "Donghyun Kim, Jiho Shin, Jung Taek Seo"
+  title_en: "Identification of IoT Security Threats and Analysis of Security Technologies"
+  venue_en: "Conference on Information Security and Cryptography-Winter 2021 (CISC-W'21)"
+- id: pub-046
+  type: conference
+  authors: "진호준, 최현표, 신지호, 서정택"
+  title: "경량형 접이식 드론 보안위협 분석"
+  venue: "한국정보보호학회 동계학술대회"
+  year: 2021
+  authors_en: "Hojun Jin, Hyunpyo Choi, Jiho Shin, Jung Taek Seo"
+  title_en: "Security Threat Analysis of Lightweight Foldable Drones"
+  venue_en: "Conference on Information Security and Cryptography-Winter 2021 (CISC-W'21)"
+- id: pub-047
+  type: conference
+  authors: "Junwon Kim, Jiho Shin, Jung Taek Seo"
+  title: "Research on PEB-LDR Data Analysis Technique for DLL Injection Detection on ICS Engineering Workstation"
+  venue: "International Conference on Intelligent Computing and its Emerging Applications (ICEA)"
+  year: 2020
+  url: "https://doi.org/10.1145/3440943.3444734"
+- id: pub-048
+  type: conference
+  authors: "Hyunpyo Choi, Jiho Shin, Jung Taek Seo"
+  title: "A Study on the Digital Forensic Method for Decentralized Web Service"
+  venue: "International Conference on Intelligent Computing and its Emerging Applications (ICEA)"
+  year: 2020
+  url: "https://doi.org/10.1145/3440943.3444736"
+- id: pub-049
+  type: conference
+  authors: "Daun Jung, Jiho Shin, Chaechang Lee, Kookheui Kwon, Jung Taek Seo"
+  title: "A Study on the Application of Technical Assessment Methodology(TAM) for Cyber Security in Nuclear Power Plant"
+  venue: "International Conference on Intelligent Computing and its Emerging Applications (ICEA)"
+  year: 2020
+  url: "https://doi.org/10.1145/3440943.3444741"
+- id: pub-050
+  type: conference
+  authors: "Joochan Lee, Hyunpyo Choi, Jiho Shin, Jung Taek Seo"
+  title: "Detection and Analysis Technique for Manipulation Attacks on PLC Control Logic"
+  venue: "International Conference on Intelligent Computing and its Emerging Applications (ICEA)"
+  year: 2020
+  url: "https://doi.org/10.1145/3440943.3444742"
+- id: pub-051
+  type: conference
+  authors: "Janghoon Kim, Hyunpyo Choi, Jiho Shin, Jung Taek Seo"
+  title: "Study on Anomaly Detection Technique in an Industrial Control System Based on Machine Learning"
+  venue: "International Conference on Intelligent Computing and its Emerging Applications (ICEA)"
+  year: 2020
+  url: "https://doi.org/10.1145/3440943.3444743"
+- id: pub-052
+  type: conference
+  authors: "J. Lee, H. Choi, J. Kim, J. Kim, D. Jung, Jiho Shin, Jung Taek Seo"
+  title: "Memory Modulation Attack through PLC Vulnerability"
+  venue: "International Conference on Internet (ICONI)"
+  year: 2019
+  award: "Outstanding Paper Award"
+- id: pub-053
+  type: misc
+  authors: "신지호"
+  title: "클라우드 환경에서 디지털포렌식 수사의 한계와 대응 : PaaS 기반 Database를 중심으로"
+  venue: "치안과학기술리뷰"
+  year: 2026
+  url: "https://psi.police.ac.kr/police/board/view.do?bbsId=BBSMSTR_000000000157&pageIndex=1&nttId=159204&menuNo=115007000000"
+  authors_en: "Jiho Shin"
+  title_en: "Limitations of and Responses to Digital Forensic Investigation in Cloud Environments: Focusing on PaaS-Based Databases"
+  venue_en: "Police Science Technology Review"
+- id: pub-054
+  type: misc
+  authors: "정다운, 신지호, 이채창, 권국희, 서정택"
+  title: "발전시설 사이버보안 평가 방법론 TAM(Technical Assessment Methodology) 분석"
+  venue: "정보보호학회지"
+  year: 2020
+  url: "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10484340"
+  authors_en: "Daun Jung, Jiho Shin, Chaechang Lee, Kookheui Kwon, Jung Taek Seo"
+  title_en: "An Analysis of the Technical Assessment Methodology (TAM) for Cybersecurity Assessment of Power Generation Facilities"
+  venue_en: "Review of KIISC"
+- id: pub-055
+  type: misc
+  authors: "방준성, 박원주, 윤상연, 신지호, 이용태"
+  title: "지능형 치안 서비스 기술 동향"
+  venue: "전자통신동향분석"
+  year: 2019
+  url: "https://doi.org/10.22648/ETRI.2019.J.340110"
+  authors_en: "J.S. Bang, W.J. Park, S.Y. Yoon, Jiho Shin, Y.T. Lee"
+  title_en: "Trends of Intelligent Public Safety Service Technologies"
+  venue_en: "Electronics and Telecommunications Trends"
+- id: pub-056
+  type: misc
+  authors: "이상윤, 염경록, 신지호, 방준성, 김승희, 박영수, 박원주, 이용태"
+  title: "치안정보 데이터뱅크 구축을 위한 민감정보 비식별화 방안 연구"
+  venue: "정보및제어논문집"
+  year: 2018
+  url: "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE07562620"
+  authors_en: "Sangyun Lee, Gyeongrok Yeom, Jiho Shin, Junseong Bang, Seunghui Kim, Yeongsu Park, Wonju Park, Yongtae Lee"
+  title_en: "A Study on Non-identification of Sensitive Information for Construction of Police Information Databank"
+  venue_en: "Conference on Information and Control Systems (CICS'18)"

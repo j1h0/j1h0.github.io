@@ -1,0 +1,18 @@
+---
+interface Props { t: any }
+const { t } = Astro.props as Props;
+---
+<section class="band" id="research">
+  <div class="container band-grid">
+    <h2 class="section-title">{t.sec.research}</h2>
+    <div class="research-grid">
+      {t.research.map((r: any) => (
+        <div class="research-item">
+          <span class="no">{r.no}</span>
+          <h3>{r.title}</h3>
+          <p>{r.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,57 @@
+# DFS Lab 프로젝트 목록
+# 출처: https://sites.google.com/view/dfslab/project (2026-09-26 curl 수집)
+# 원문 그대로 이관. status: ongoing(진행) | closed(종료)
+- id: proj-001
+  status: ongoing
+  title: "고위공직자 범죄 및 AI 악용 대응을 위한 실전형 디지털포렌식 교육 콘텐츠 개발 사업"
+  period: "2026"
+  agency: "고위공직자범죄수사처"
+  role: "공동연구원"
+- id: proj-002
+  status: ongoing
+  title: "경찰청 디지털포렌식 분석관 역할 확대 방안 정책연구"
+  period: "2026"
+  agency: "경찰청"
+  role: "공동연구원"
+- id: proj-003
+  status: ongoing
+  title: "디지털포렌식 국가기반체계의 현황 진단과 중장기 정책 방향 연구"
+  period: "2026"
+  agency: "한국정보보호학회 디지털포렌식연구회"
+  role: "참여연구원"
+- id: proj-004
+  status: closed
+  title: "생성형 인공지능의 사회적 부작용을 방지하기 위한 자가 진화형 딥페이크 탐지 기술 개발"
+  period: "2024~2026"
+  agency: "과학기술정보통신부"
+  role: "참여연구원"
+- id: proj-005
+  status: closed
+  title: "분석 모델의 성능저하 극복을 위한 데이터 드리프트 관리기술 개발"
+  period: "2024~2026"
+  agency: "과학기술정보통신부"
+  role: "참여연구원"
+- id: proj-006
+  status: closed
+  title: "스마트 철도치안 미래전략 수립 연구"
+  period: "2022"
+  agency: "국토교통부"
+  role: "공동연구원"
+- id: proj-007
+  status: closed
+  title: "위험 상황 초기 인지를 위한 ICT 기반의 범죄 위험도 예측 및 대응 기술 개발"
+  period: "2018-2019"
+  agency: "과학기술정보통신부"
+  role: "참여연구원"
+- id: proj-008
+  status: closed
+  title: "암호화폐(Cryptocurrency) 관련 범죄 및 형사정책 연구"
+  period: "2017"
+  agency: "한국형사정책연구원"
+  role: "공동연구원"
+- id: proj-009
+  status: closed
+  title: "신종금융사기범죄의 실태 분석과 형사정책적 대응방안 연구"
+  period: "2016"
+  agency: "한국형사정책연구원"
+  role: "참여연구원"

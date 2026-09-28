@@ -1,0 +1,30 @@
+---
+import Icon from './Icon.astro';
+
+interface Props { t: any; updated: string; lang: 'ko' | 'en' }
+const { t, updated, lang } = Astro.props as Props;
+const updatedLabel = lang === 'ko' ? `최종 갱신 ${updated.replaceAll('-', '.')}` : `Updated ${updated}`;
+---
+<section class="contact-band" id="contact">
+  <div class="container">
+    <div class="contact-row">
+      <h2 class="section-title">{t.sec.contact}</h2>
+      <div class="contact-list">
+        {t.contact.map((c: any) => (
+          <div class="contact-item">
+            <Icon name={c.icon} />
+            <div>
+              <div class="label">{c.label}</div>
+              {c.href ? <a class="value" href={c.href}>{c.value}</a> : <div class="value">{c.value}</div>}
+            </div>
+          </div>
+        ))}
+      </div>
+      <a class="btn btn-primary" href="/JihoShin_CV_2026.pdf" download><Icon name="download" />{t.btnCv}</a>
+    </div>
+    <div class="footer-row">
+      <a href="https://dfslab.github.io" target="_blank" rel="noopener">DFS Lab</a>
+      <span>{updatedLabel}</span>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,15 @@
+---
+interface Props { t: any }
+const { t } = Astro.props as Props;
+---
+<section class="band">
+  <div class="container activities-grid">
+    <h2 class="section-title">{t.sec.activities} · {t.sec.certs}</h2>
+    <ul class="list-plain">
+      {t.activities.map((a: string) => <li>{a}</li>)}
+    </ul>
+    <ul class="list-plain">
+      {t.certs.map((c: string) => <li>{c}</li>)}
+    </ul>
+  </div>
+</section>

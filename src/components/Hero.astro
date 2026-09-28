@@ -1,0 +1,31 @@
+---
+import Icon from './Icon.astro';
+
+interface Props { t: any }
+const { t } = Astro.props as Props;
+---
+<section class="hero">
+  <div class="container hero-grid">
+    <img class="hero-photo" src="/images/profile.jpg" alt={t.name} width="280" height="340" />
+    <div class="hero-namerow">
+      <h1 class="hero-name">{t.name}</h1>
+      <span class="hero-name-alt">{t.nameAlt}</span>
+    </div>
+    <div class="hero-roleline">
+      <span class="role">{t.role}</span>
+      <span class="affil"> · {t.affil}</span>
+    </div>
+    <p class="hero-intro">{t.intro}</p>
+    <div class="chip-row hero-chips">
+      {t.keywords.map((k: string) => <span class="chip">{k}</span>)}
+    </div>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="/JihoShin_CV_2026.pdf" download><Icon name="download" />{t.btnCv}</a>
+      <div class="btn-row-2">
+        <a class="btn btn-secondary" href="mailto:suchme@gmail.com"><Icon name="mail" />{t.btnMail}</a>
+        <a class="btn btn-outline" href="https://dfslab.github.io" target="_blank" rel="noopener">{t.btnLab}<Icon name="arrow_outward" /></a>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="section-divider"></div>
