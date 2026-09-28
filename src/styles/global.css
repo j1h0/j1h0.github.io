@@ -12,6 +12,8 @@ body {
   font-family: var(--font-plain);
   font-size: 16px;
   line-height: 1.5;
+  word-break: keep-all;
+  overflow-wrap: break-word;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -159,7 +161,8 @@ details > summary.more-toggle::-webkit-details-marker { display: none; }
 .proj-past-row .title { color: var(--on-surface); }
 .proj-past-row .meta { font-size: 12px; line-height: 18px; }
 .proj-rnd-note { font-size: 14px; line-height: 20px; color: var(--on-surface-variant); padding: 0 4px; }
-.intl-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 4px; }
+.intl-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 12px; margin-bottom: 4px; }
+.intl-head > :first-child { white-space: nowrap; }
 .intl-meta { font-size: 14px; color: var(--on-surface-variant); }
 .intl-roles { font-size: 15px; line-height: 24px; color: var(--on-surface-variant); margin-top: 12px; text-wrap: pretty; }
 .intl-row { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--outline-variant); margin-top: 12px; }
