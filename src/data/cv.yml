@@ -1,7 +1,7 @@
 # 신지호 개인 CV 랜딩페이지 콘텐츠 데이터.
 # 논문(publications.yml)·과제(projects.yml)를 제외한 모든 텍스트가 여기 있다.
 # 출처: CV Landing.dc.html의 CAREER 배열과 build() 함수, storyboard.md 5절 결재사항.
-# 교정 반영: 치안정책연구소 영문 Research Fellow, 경찰대학 영문 Research Officer,
+# 교정 반영: 치안정책연구소 영문 Research Fellow, 경찰대학 영문 Research Police Officer(9-28 편집본),
 #            영문 소속 표기 통일, 이사 영문 Board Member, 경찰 경력기관 국문 명칭은
 #            2026-09-28 소장 결재로 정식 지방청 명칭으로 교체(career.police 항목 참고).
 updated: "2026-09-28"
@@ -14,6 +14,7 @@ ko:
   intro: "IT 개발자로 5년, 경찰 사이버수사관과 포렌식 분석관으로 7년, 치안 연구기관에서 11년. 현장에서 막혔던 문제를 연구합니다."
   keywords: ["Digital Forensics", "Cybersecurity", "Cybercrime Investigation"]
   btnCv: "이력서 내려받기 (PDF)"
+  cvPdf: "/JihoShin_CV_2026.pdf"
   btnMail: "이메일 보내기"
   btnLab: "DFS Lab"
   langBtn: EN
@@ -88,7 +89,7 @@ ko:
   statLabels: {total: 전체, journal: 학술지, conference: 학술대회, misc: 기타}
   ongoingLabel: 진행
   closedMoreLabel: 종료 과제 보기
-  projRnd: "경찰청 국가R&D 기획·평가 4건"
+  projRnd: "경찰청 국가R&D사업 기획·평가 4건"
   intlCountries: ["동티모르", "스리랑카", "방글라데시", "오만", "튀니지", "몽골", "콜롬비아", "아시아 11개국"]
   intlRoles: "예비조사 총괄, 사업평가, 커리큘럼 개발·강의, 장비분야 전문가"
   intlMoreLabel: "12건 목록 보기"
@@ -112,7 +113,7 @@ ko:
     - "한국정보보호학회 종신회원 (2019~)"
     - "경찰청 경력경쟁 채용 심사위원 (2018)"
   certs:
-    - "EnCE (2012)"
+    - "EnCase Certified Examiner (2012)"
     - "경찰청 사이버(디지털포렌식) 전문수사관 (2014)"
     - "ISO 27001/19011/22301 Auditor Course (2018)"
     - "정보처리산업기사 외"
@@ -142,6 +143,7 @@ en:
   intro: "Five years as an IT developer, seven as a police cybercrime investigator and forensic examiner, eleven at police research institutes. I research the problems I hit in the field."
   keywords: ["Digital Forensics", "Cybersecurity", "Cybercrime Investigation"]
   btnCv: "Download CV (PDF)"
+  cvPdf: "/JihoShin_CV_2026_en.pdf"
   btnMail: "Email me"
   btnLab: "DFS Lab"
   langBtn: 한국어
@@ -191,7 +193,7 @@ en:
     - period: "2015~2018"
       sector: inst
       org: Korean National Police University, International Cybercrime Research Center
-      role: Research Officer
+      role: Research Police Officer
     - period: "2008~2015"
       sector: police
       org: Gyeonggi Nambu Provincial Police Agency
@@ -207,8 +209,8 @@ en:
         - {period: "2002~2004", org: "Newmedicom Co., Ltd.", role: "Staff, Web application development"}
   careerSub: "Adjunct Professor, Dept. of Cyber Investigation, Police Investigation Academy (2013~present) · Lecturer, Chung-Ang University Graduate School of Public Administration (2017) · Digital forensics lectures at Gachon Univ., Kookmin Univ., KNPU, NIS, Korea Customs Service and others"
   edu:
-    - {deg: "Ph.D. in Engineering", school: "Dept. of Information Security, Soonchunhyang University", date: "Feb 2022"}
-    - {deg: "M.S. in Engineering", school: "Dept. of Digital Forensics, Graduate School of Information Security, Korea University", date: "Feb 2015"}
+    - {deg: "Ph.D. in Engineering", school: "Dept. of Information Security & Engineering, Soonchunhyang University", date: "Feb 2022"}
+    - {deg: "M.S. in Engineering", school: "Dept. of Digital Forensics, School of Cybersecurity, Korea University", date: "Feb 2015"}
   selectedPubs: [pub-001, pub-002, pub-003, pub-004, pub-016]
   pubsAllLabel: "All publications"
   pubsCloseLabel: Collapse
@@ -240,7 +242,7 @@ en:
     - "Lifetime Member, Korea Institute of Information Security and Cryptology (2019~)"
     - "Examiner, KNPA experienced-hire recruitment (2018)"
   certs:
-    - "EnCE (2012)"
+    - "EnCase Certified Examiner (2012)"
     - "KNPA Cyber (Digital Forensics) Specialist Investigator (2014)"
     - "ISO 27001/19011/22301 Auditor Course (2018)"
     - "Industrial Engineer Information Processing, and others"

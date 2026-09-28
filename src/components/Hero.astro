@@ -20,7 +20,7 @@ const { t } = Astro.props as Props;
       {t.keywords.map((k: string) => <span class="chip">{k}</span>)}
     </div>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="/JihoShin_CV_2026.pdf" download><Icon name="download" />{t.btnCv}</a>
+      <a class="btn btn-primary" href={t.cvPdf} download><Icon name="download" />{t.btnCv}</a>
       <div class="btn-row-2">
         <a class="btn btn-secondary" href="mailto:suchme@gmail.com"><Icon name="mail" />{t.btnMail}</a>
         <a class="btn btn-outline" href="https://dfslab.github.io" target="_blank" rel="noopener">{t.btnLab}<Icon name="arrow_outward" /></a>

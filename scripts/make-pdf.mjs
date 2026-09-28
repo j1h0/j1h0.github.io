@@ -1,4 +1,4 @@
-// dist/를 정적 서빙한 뒤 /cv/ 를 puppeteer로 인쇄해 이력서 PDF를 만든다.
+// dist/를 정적 서빙한 뒤 /cv/(국문)와 /en/cv/(영문)를 puppeteer로 인쇄해 이력서 PDF 두 종을 만든다.
 // 로컬(맥미니)과 GitHub Actions 러너 양쪽에서 이 스크립트 하나를 그대로 쓴다.
 // 실행 후 pdffonts로 한글 글꼴이 실제로 임베드됐는지 확인하고, 없으면 실패시킨다.
 import http from 'node:http';
@@ -8,7 +8,11 @@ import { execFileSync } from 'node:child_process';
 import puppeteer from 'puppeteer-core';
 
 const ROOT = path.resolve(process.cwd(), 'dist');
-const OUT = process.env.PDF_OUT || path.resolve(process.cwd(), 'dist/JihoShin_CV_2026.pdf');
+const OUT_DIR = process.env.PDF_OUT_DIR || ROOT;
+const TARGETS = [
+  { route: '/cv/', file: 'JihoShin_CV_2026.pdf', footerLeft: '신지호 이력서 · j1h0.github.io', footerRight: '2026.09.28 기준' },
+  { route: '/en/cv/', file: 'JihoShin_CV_2026_en.pdf', footerLeft: 'Jiho Shin CV · j1h0.github.io', footerRight: 'Updated 2026.09.28' },
+];
 const PORT = 4173;
 const EXEC_PATH = process.env.PUPPETEER_EXECUTABLE_PATH || findLocalChrome();
 
@@ -53,30 +57,33 @@ async function main() {
   // GitHub Actions 우분투 러너는 비특권 사용자 네임스페이스가 막혀 있어 샌드박스 없이 띄운다(자기 사이트 로컬 파일만 연다).
   const browser = await puppeteer.launch({ executablePath: EXEC_PATH, headless: true, args: process.env.CI ? ['--no-sandbox'] : [] });
   try {
-    const page = await browser.newPage();
-    await page.goto(`http://localhost:${PORT}/cv/`, { waitUntil: 'networkidle0' });
-    await page.evaluate(() => document.fonts.ready);
-
-    fs.mkdirSync(path.dirname(OUT), { recursive: true });
-    await page.pdf({
-      path: OUT,
-      format: 'A4',
-      printBackground: true,
-      margin: { top: '16mm', bottom: '16mm', left: '16mm', right: '16mm' },
-      displayHeaderFooter: true,
-      headerTemplate: '<span></span>',
-      footerTemplate: `
-        <div style="width:100%;display:flex;justify-content:space-between;font-family:'Noto Sans KR','Roboto',sans-serif;font-size:8px;color:rgb(73,69,79);padding:0 16mm;">
-          <span>신지호 이력서 · j1h0.github.io</span><span>2026.09.28 기준</span>
-        </div>`,
-    });
+    for (const tg of TARGETS) {
+      const OUT = path.join(OUT_DIR, tg.file);
+      const page = await browser.newPage();
+      await page.goto(`http://localhost:${PORT}${tg.route}`, { waitUntil: 'networkidle0' });
+      await page.evaluate(() => document.fonts.ready);
+      fs.mkdirSync(path.dirname(OUT), { recursive: true });
+      await page.pdf({
+        path: OUT,
+        format: 'A4',
+        printBackground: true,
+        margin: { top: '16mm', bottom: '16mm', left: '16mm', right: '16mm' },
+        displayHeaderFooter: true,
+        headerTemplate: '<span></span>',
+        footerTemplate: `
+          <div style="width:100%;display:flex;justify-content:space-between;font-family:'Noto Sans KR','Roboto',sans-serif;font-size:8px;color:rgb(73,69,79);padding:0 16mm;">
+            <span>${tg.footerLeft}</span><span>${tg.footerRight}</span>
+          </div>`,
+      });
+      await page.close();
+      console.log(`[make-pdf] 생성: ${OUT}`);
+      checkFonts(OUT);
+    }
   } finally {
     await browser.close();
     server.close();
   }
 
-  console.log(`[make-pdf] 생성: ${OUT}`);
-  checkFonts(OUT);
 }
 
 function checkFonts(pdfPath) {
